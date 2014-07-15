@@ -1,0 +1,53 @@
+# the name for the squeezelite player (-n option):
+SL_NAME="<%= @player_name %>"
+
+# Set the soundcard
+<% if @soundcard -%>
+SL_SOUNDCARD="<%= @soundcard %>"
+<%- else -%>
+#SL_SOUNDCARD="sysdefault:CARD=ALSA"
+<% end -%>
+
+# Uncomment the next line (remove hash) if you want to change the mac address (-m option):
+<% if @mac_address -%>
+SL_MAC_ADDRESS="<%= @mac_address %>"
+<%- else -%>
+#SL_MAC_ADDRESS="00:00:00:00:00:01"
+<% end -%>
+#        Note: when left commented squeezelite will use the mac address of your ethernet card or 
+#              wifi adapter, which is what you want. 
+#              If you change it to something different, it will give problems is you use mysqueezebox.com .
+
+# Uncomment the next line (remove hash) if you want to point squeezelite 
+# at the IP address of your squeezebox server (-s option). And change the IP address of course..
+<% if @server_ip -%>
+SB_SERVER_IP="<%= @server_ip %>"
+<%- else -%>
+#SB_SERVER_IP="192.168.0.100"
+<% end -%>
+#        Note: if this is not set, Squeezelite will use auto discovery to find 
+#              the LMS server, which works fine too.
+
+# Uncomment the next line if you want squeezelite to start playing on startup. BE AWARE: If you use this, you
+# should also uncomment and fill-in SB_SERVER_IP (see above). Otherwise this will not work.
+<% if @auto_play -%>
+SL_AUTO_PLAY=Yes
+<%- else -%>
+#SL_AUTO_PLAY=Yes
+<% end -%>
+
+# Uncomment the next line (remove hash) if you want to set ALSA parameters (-a option, set to buffer size 80):
+<% if @alsa_params -%>
+SL_ALSA_PARAMS="<%= @alsa_params %>"
+<%- else -%>
+#SL_ALSA_PARAMS="80"
+<% end -%>
+
+# Uncomment the next TWO lines to turn on logging (-f and -d option):
+<% if @log_file and @log_level -%>
+SL_LOGFILE="<%= @log_file %>
+SL_LOGLEVEL="<%= @log_level %>"
+<%- else -%>
+#SL_LOGFILE=/var/log/squeezelite.log
+#SL_LOGLEVEL="all=debug"
+<% end -%>

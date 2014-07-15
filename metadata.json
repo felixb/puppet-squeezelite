@@ -1,0 +1,33 @@
+{
+  "name": "ub0r-squeezelite",
+  "version": "0.1.0",
+  "author": "Felix Bechstein",
+  "summary": "Manage squeezelite via Puppet",
+  "license": "Apache 2.0",
+  "source": "git@github.com:felixb/puppet-squeezelite.git",
+  "project_page": "https://github.com/felixb/puppet-squeezelite",
+  "issues_url": "https://github.com/felixb/puppet-squeezelite/issues",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "10.04",
+        "12.04",
+        "14.04"
+      ]
+    },
+  ]
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_range": ">= 1.0.0"
+    }
+  ]
+}
