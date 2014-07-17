@@ -60,49 +60,49 @@ All interaction with the squeezelite module can be done with the main class.
 
 ##`player_name`
 
-player name shown in logitech media server
+player name shown in logitech media server  
 optional, defaults to hostname
 
 ##`soundcard`
 
-Set the soundcard
-example: "sysdefault:CARD=ALSA"
+Set the soundcard  
+example: "sysdefault:CARD=ALSA"  
 optional
 
 ##`mac_address`
 
-Change the mac address
+Change the mac address  
   Note: when left commented squeezelite will use the mac address of your ethernet card or
   wifi adapter, which is what you want.
-  If you change it to something different, it will give problems is you use mysqueezebox.com .
+  If you change it to something different, it will give problems is you use mysqueezebox.com.  
 optional
 
 ##`server_ip`
 
-Change the IP address of your squeezebox server
+Change the IP address of your squeezebox server  
 optional
 
 ##`auto_play`
 
-Start playing when starting the service
+Start playing when starting the service  
 optional, defaults to false
 
 ##`alsa_params`
 
-Set ALSA parameters
-example: "80"
+Set ALSA parameters  
+example: "80"  
 optional
 
 ##`log_file`
 
-path to a log file
-only useful in combination with log_level
+path to a log file  
+only useful in combination with log_level  
 optional
 
 ##`log_level`
 
-example: "all=debug"
-only useful in combination with log_file
+example: "all=debug"  
+only useful in combination with log_file  
 optional
 
 ## Limitations
