@@ -1,6 +1,6 @@
 {
   "name": "ub0r-squeezelite",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Felix Bechstein",
   "summary": "Manage squeezelite via Puppet",
   "license": "Apache 2.0",

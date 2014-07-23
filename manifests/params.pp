@@ -21,8 +21,14 @@ class squeezelite::params {
     'amd64', 'x86_64': {
       $squeezelite_bin = 'squeezelite-x86-64'
     }
-    'arm': {
+    'armv6': {
+      $squeezelite_bin = 'squeezelite-armv6'
+    }
+    'armv6l', 'armv6hf': {
       $squeezelite_bin = 'squeezelite-armv6hf'
+    }
+    'arm': {
+      $squeezelite_bin = 'squeezelite-armv5te'
     }
     default: {
       fail("unknown architecture: $::architecture")
